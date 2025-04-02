@@ -10,7 +10,6 @@ const NewTaskForm = ({ onAddTask }) => {
     if (title.trim() === '') return; // Evitar agregar tareas sin título
 
     const newTask = {
-      id: Date.now(), // Usamos la fecha actual como ID temporal
       title,
       description,
       status: 'Por hacer'
