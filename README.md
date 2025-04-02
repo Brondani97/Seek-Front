@@ -32,6 +32,9 @@ y API Gateway, conectándose a una base de datos MongoDB (MongoDB Atlas). Las ca
 El back-end está desplegado en AWS Lambda y expuesto a través de API Gateway.
 URL Back-end: https://pqaq8er0d8.execute-api.sa-east-1.amazonaws.com/Prod/tasks
 
+Para hacer request al back-end con postman por ejemplo se necesita el siguiente token:
+Authorization:Bearer TokenSecreto
+
 --------------------------------------------------------
                   DESPLIEGUE Y ARQUITECTURA
 --------------------------------------------------------
