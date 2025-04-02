@@ -34,6 +34,7 @@ URL Back-end: https://pqaq8er0d8.execute-api.sa-east-1.amazonaws.com/Prod/tasks
 
 Para hacer request al back-end con postman por ejemplo se necesita el siguiente token:
 Authorization:Bearer TokenSecreto
+(En condiciones normales no se expondria el valor de ningun token o clave de acceso en un readme, pero dado que es un challenge, para su comodidad esta expuesto)
 
 --------------------------------------------------------
                   DESPLIEGUE Y ARQUITECTURA
