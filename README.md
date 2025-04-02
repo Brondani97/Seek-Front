@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+Gestor de Tareas
+Este proyecto es una aplicación fullstack para la gestión de tareas desarrollada como parte de un reto de codificación para el puesto de Fullstack Developer (React + Python Serverless). La solución se compone de dos partes:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front-end
+La aplicación web se desarrolló en React y utiliza Material UI para una interfaz moderna y responsiva. Las principales funcionalidades incluyen:
 
-## Available Scripts
+Visualización de tareas: Muestra una lista de tareas con su título, descripción y estado.
 
-In the project directory, you can run:
+Operaciones CRUD: Permite agregar, actualizar (cambiar estado) y eliminar tareas.
 
-### `npm start`
+Gráficos: Una vista de gráficos que visualiza la distribución de tareas según su estado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pruebas unitarias: Se realizaron pruebas unitarias para asegurar la calidad del código.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La aplicación front-end está desplegada en AWS S3 y se distribuye mediante CloudFront (opcional).
+URL Front-end: http://gestor-tareas-front.s3-website-sa-east-1.amazonaws.com/
 
-### `npm test`
+Back-end
+El back-end se implementó en Python como funciones serverless utilizando AWS Lambda y API Gateway, y se conecta a una base de datos MongoDB (MongoDB Atlas). Las características principales incluyen:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+CRUD para tareas: Funciones Lambda que implementan operaciones GET, POST, PUT y DELETE para gestionar las tareas.
 
-### `npm run build`
+Autenticación simple: Se implementó autenticación basada en token para proteger las operaciones que modifican datos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pruebas unitarias: Se desarrollaron pruebas con pytest para asegurar el correcto funcionamiento del back-end.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Documentación de la API: Se creó una especificación OpenAPI para documentar los endpoints.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+El back-end está desplegado en AWS Lambda y expuesto a través de API Gateway.
+URL Back-end: https://5cvqnneenb.execute-api.sa-east-1.amazonaws.com/Prod/tasks
 
-### `npm run eject`
+Despliegue y Arquitectura
+Front-end: Desplegado en AWS S3 (y opcionalmente con CloudFront para distribución global).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Back-end: Desplegado como funciones Lambda usando AWS SAM, integradas con API Gateway para exponer la API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Base de Datos: Utiliza MongoDB Atlas para almacenar las tareas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto demuestra la capacidad de construir y desplegar una solución fullstack utilizando tecnologías modernas y enfoques serverless en AWS, aplicando buenas prácticas de desarrollo y pruebas.
