@@ -30,7 +30,7 @@ y API Gateway, conectándose a una base de datos MongoDB (MongoDB Atlas). Las ca
   - Documentación de la API: Se creó una especificación OpenAPI para documentar los endpoints.
 
 El back-end está desplegado en AWS Lambda y expuesto a través de API Gateway.
-URL Back-end: https://5cvqnneenb.execute-api.sa-east-1.amazonaws.com/Prod/tasks
+URL Back-end: https://pqaq8er0d8.execute-api.sa-east-1.amazonaws.com/Prod/tasks
 
 --------------------------------------------------------
                   DESPLIEGUE Y ARQUITECTURA
